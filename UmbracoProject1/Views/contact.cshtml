@@ -1,0 +1,23 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+	var contactImg = Model?.Value<IPublishedContent>("contactImg")?.Url();
+    var mapContactImg = Model?.Value<IPublishedContent>("mapContactImg")?.Url();
+}
+
+<h1>@Model.Value("titel") </h1>
+
+
+<h1> @Model.Value("pageContactTitle")</h1>
+
+<h2> @Model.Value("headlineContact")</h2> 
+
+<h1> @Model.Value("phoneNr") @Model.Value("emailtoOffice") @Model.Value("officelocation") </h1>
+
+<img class="looksmile-img" src="@contactImg" alt="@Model.Value("contactImg")"> 
+
+
+
+<img class="maploction" src="@mapContactImg" alt="@Model.Value("mapContactImg")"> 

@@ -1,0 +1,7 @@
+﻿@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.MyElementTypeAliasOfContent>>;
+@using Umbraco.Cms.Web.Common.PublishedModels;
+
+<div class="container"> 
+    @await Html.GetBlockGridItemAreasHtmlAsync(Model)
+</div>

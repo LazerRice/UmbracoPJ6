@@ -1,0 +1,39 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+    var expertPic = Model?.Value<IPublishedContent>("expertPic")?.Url();
+    var expertPic2 = Model?.Value<IPublishedContent>("expertPic2")?.Url();
+}
+
+<h1>@Model.Value("aboutHeadline") </h1>
+<h1>@Model.Value("aboutMainQuote") </h1>
+<h1>@Model.Value("aboutContentText") </h1>
+<h1> @Model.Value("aboutContentImg")</h1>
+<h2>@Model.Value("aboutUnderTextImg") </h2>
+
+
+<h2>@Model.Value("reviewHeadline") </h2>
+<h2> @Model.Value("reviewSectionHeadline")</h2>
+<h2> @Model.Value("reviewQuote")</h2>
+<h2> @Model.Value("reviewStars")</h2>
+<h2> @Model.Value("reviewNameOfReviewer")</h2>
+<h2>@Model.Value("reviewCompanyname") </h2>
+
+
+<h2>@Model.Value("headlineExpert") </h2>
+
+
+<img class="expert-image" src="@expertPic" alt="@Model.Value("expertPic")">
+<h2>@Model.Value("expertName") </h2>
+<h2>@Model.Value("jobdescriptionExpert") </h2>
+
+
+<h2> </h2>
+<img class="expert-image" src="@expertPic2" alt="@Model.Value("expertPic2")">
+<h5> @Model.Value("expertName2")</h5>
+<h5> @Model.Value("jobdescriptionExpert2")</h5>
+<h5> </h5>
+<h5> </h5>
+
